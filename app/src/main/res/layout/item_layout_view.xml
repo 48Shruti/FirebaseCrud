@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".9"
+        android:id="@+id/guide90v"
+        android:orientation="vertical"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".17"
+        android:id="@+id/guide15h"
+        android:orientation="horizontal"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/tvtitleview"/>
+
+    <TextView
+        android:id="@+id/tvdescriptionview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Description"
+        android:textColor="@color/black"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@id/guide15h"
+        app:layout_constraintEnd_toEndOf="@id/guide90v"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvtitleview" />
+
+    <ImageButton
+        android:id="@+id/btnupdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#97A6CD"
+        android:src="@drawable/baseline_update_24"
+        android:text="updade"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guide90v"
+        app:layout_constraintTop_toBottomOf="@id/tvtitleview" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:backgroundTint="#97A6CD"
+        android:layout_gravity="right"
+        app:layout_constraintStart_toStartOf="@id/guide90v"
+        app:layout_constraintTop_toBottomOf="@id/btnupdate"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/baseline_delete_24"
+        android:text="delete"
+
+        android:id="@+id/btndelete"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

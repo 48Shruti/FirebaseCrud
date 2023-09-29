@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="mainActivity"
+            type="com.shruti.firebasecrud.MainActivity" />
+    </data>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textColor="@color/black"
+        android:id="@+id/tvtitle"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="title"
+        android:textColor="@color/black"
+        android:id="@+id/ettitle"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description"
+        android:textColor="@color/black"
+        android:id="@+id/tvdescription"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description"
+        android:textColor="@color/black"
+        android:id="@+id/etdescription"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="save"
+        android:backgroundTint="#97A6CD"
+        android:textColor="@color/black"
+        android:id="@+id/save"/>
+<!--        android:onClick="@{()->mainActivity.save"/>-->
+</LinearLayout>
+</layout>
