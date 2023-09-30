@@ -121,7 +121,19 @@ class MainActivity : AppCompatActivity(),NotesInterface {
     }
 
     override fun delete(notesDataClass: NotesDataClass, position: Int) {
-       item.removeAt(position)
+//       item.removeAt(position)
+        firestore.collection("Users").document(notesDataClass.id?:"")
+            .delete()
+            .addOnSuccessListener {
+                Toast.makeText(this,"Data delete",Toast.LENGTH_SHORT).show()
+                getCollectionsData()
+            }
+            .addOnCanceledListener {
+                Toast.makeText(this,"Data Cancel",Toast.LENGTH_SHORT).show()
+            }
+            .addOnFailureListener{
+                Toast.makeText(this,"Data fail",Toast.LENGTH_SHORT).show()
+            }
         adapter.notifyDataSetChanged()
     }
     private fun getCollectionsData(){

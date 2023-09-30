@@ -15,6 +15,7 @@ class RecyclerAdapter(var item : ArrayList<NotesDataClass>, var notesInterface: 
         var description = view.findViewById<TextView>(R.id.tvdescriptionview)
         var updates = view.findViewById<ImageButton>(R.id.btnupdate)
         var delete = view.findViewById<ImageButton>(R.id.btndelete)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -29,6 +30,7 @@ class RecyclerAdapter(var item : ArrayList<NotesDataClass>, var notesInterface: 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.title.setText(item[position].title)
         holder.description.setText(item[position].descriptions)
+
         holder.updates.setOnClickListener{
             notesInterface.update(item[position],position)
         }
